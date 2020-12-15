@@ -1,0 +1,36 @@
+.box-social {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  // grid-template-rows: minmax(4rem, min-content);
+  grid-column-gap: 2rem;
+  margin-left: 8rem;
+
+  @include respond($bp-medium) {
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  &__item {
+    list-style: none;
+    transform: translate(0) scale(1);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-2px) scale(1.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    @include flex-center;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-primary;
+  }
+}

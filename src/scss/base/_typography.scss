@@ -1,0 +1,39 @@
+.heading-primary {
+  @include set-font-style(5rem, 900, 1, transparent);
+  background-image: $gradient-heading;
+  -webkit-background-clip: text;
+
+  @include respond($bp-largest) {
+    font-size: 4.8rem;
+  }
+
+  @include respond($bp-smalest) {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-secondary {
+  @include flex-center(column);
+  @include set-font-style(3.2rem, 700, 1);
+  margin-bottom: 2rem;
+
+  &::before {
+    @include separator-line($color-grey-dark-1);
+  }
+}
+
+.paragraph {
+  @include set-font-style(2rem, 400, 1.5);
+  padding: 1rem 2rem;
+  margin: 0 3rem 4rem 3rem;
+  background-color: $color-grey-light-1;
+  border-radius: $border-radius;
+
+  @include respond($bp-medium) {
+    @include set-size(72%);
+  }
+
+  @include respond($bp-medium) {
+    @include set-size(90%);
+  }
+}

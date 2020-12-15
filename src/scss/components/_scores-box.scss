@@ -1,0 +1,8 @@
+.scores-box {
+  display: flex;
+  @include set-font-style(2.5rem, 700);
+
+  &__score {
+    margin-right: 3.5rem;
+  }
+}

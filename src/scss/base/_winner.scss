@@ -1,0 +1,81 @@
+// Style sheet applied when guessing the hidden number
+body.winner-theme {
+  //BASE
+  background-image: $gradient-secondary-top;
+
+  @include respond($bp-medium) {
+    background-image: $gradient-secondary-bottom;
+  }
+
+  // TYPOGRAPHY
+  & .heading-primary {
+    background-image: $gradient-heading--winner;
+  }
+
+  & .heading-secondary::before {
+    @include separator-line($color-grey-light-1);
+  }
+
+  & .paragraph {
+    color: $color-grey-dark-2;
+  }
+
+  // MAIN PAGE
+  & .section-description {
+    @include set-color-text($color-primary-opacity-1);
+  }
+
+  & .section-game {
+    @include set-color-text($color-primary-opacity-2);
+  }
+
+  // BTN
+  & %btn::after {
+    @include set-color-text($color-secondary);
+  }
+
+  // MESSAGE
+  & .message::before {
+    @include separator-line($color-grey-light-1);
+  }
+
+  // NUMBER BOX
+  %line-box-speudoelement {
+    background-color: $color-grey-light-1;
+  }
+
+  .number-box {
+    @include set-color-text($color-secondary);
+
+    &::before {
+      @extend %line-box-speudoelement;
+    }
+
+    &::after {
+      @extend %line-box-speudoelement;
+    }
+  }
+
+  // CHECK BOX
+  .check-box__input {
+    // color: $color-grey-dark-2;
+    color: transparent;
+  }
+
+  // FOOTER
+  .footer {
+    @include set-color-text($color-primary-opacity-1);
+
+    &__text--red {
+      color: $color-secondary;
+    }
+
+    &__link:hover {
+      border-bottom: 1px solid $color-secondary;
+    }
+  }
+
+  .box-social__icon {
+    fill: $color-secondary;
+  }
+}

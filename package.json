@@ -1,0 +1,27 @@
+{
+  "name": "guessthenumberapp",
+  "version": "1.0.0",
+  "description": "Small game app created with JavaScript.",
+  "default": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000 --open",
+    "build": "parcel build public/*.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf -rm ./.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oscargjane/Guess-the-number.git"
+  },
+  "author": "Oscar G Jané",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/runtime-corejs3": "^7.12.5",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "2.2.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.29.0"
+  },
+  "dependencies": {}
+}

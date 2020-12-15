@@ -1,0 +1,36 @@
+%line-box-pseudoelement {
+  @include set-size(12rem, 0.1rem);
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 50%;
+  background-color: $color-grey-dark-1;
+}
+
+.number-box {
+  @include flex-center;
+  @include set-size(14rem, 12rem);
+  @include set-font-style(7rem, 700);
+  @include set-color-text($color-primary);
+  position: relative;
+  border-radius: $border-radius;
+  box-shadow: 0 2rem 5rem hsl(0, 0%, 0%, 0.2);
+
+  @include respond($bp-small) {
+    @include set-size(12rem, 10rem);
+  }
+
+  &__number {
+    @include flex-center(column);
+  }
+
+  &::before {
+    @extend %line-box-pseudoelement;
+    right: 15rem;
+  }
+
+  &::after {
+    @extend %line-box-pseudoelement;
+    left: 15rem;
+  }
+}

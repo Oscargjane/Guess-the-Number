@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess The Number!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../src/img/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="container container--js">
+    <main class="main-container">
+      <section class="section-description">
+        <h1 class="heading-primary">Guess the number!</h1>
+        <h2 class="heading-secondary">How to play?</h2>
+        <div class="paragraph">
+          <p>
+            The game consists of trying to guess the hidden number between 1 and
+            20 in the fewest possible attempts. To achieve this, it consists of
+            20 attempts, the less we spend, the higher our final score. You can
+            always try again. Good luck! 🤟
+          </p>
+        </div>
+        <button class="btn-again btn-again--js" data-content="New Game">
+          New Game
+        </button>
+      </section>
+      <section class="section-game">
+        <div class="number-box">
+          <p class="number-box__number">
+            <span class="number-box__number--js">?</span>
+          </p>
+        </div>
+        <p class="message">
+          <span class="message--js">Start guessing...</span>
+        </p>
+        <div class="check-box">
+          <input type="number" class="check-box__input check-input--js" />
+          <button class="btn-check btn-check--js" data-content="Check!">
+            Check!
+          </button>
+        </div>
+        <div class="scores-box">
+          <p class="scores-box__score">
+            💯 Score: <span class="scores-box__score--js">20</span>
+          </p>
+          <p class="scores-box__highscore">
+            🥇 Highscore: <span class="scores-box__highscore--js">0</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        <span class="footer__text--made"
+          >Made with 🧡 by
+          <span class="footer__text--red">Oscar G Jané</span></span
+        ><br />My version of the Guess my number! project from Jonas Schmedtmann
+        course:
+        <a
+          href="https://www.udemy.com/course/the-complete-javascript-course/"
+          class="footer__link"
+          ><span class="footer__text--red"
+            >The Complete JavaScript Course 2020: From Zero to Expert!</span
+          ></a
+        >
+      </p>
+      <ul class="box-social">
+        <li class="box-social__item">
+          <a href="https://twitter.com/OscarJan18" class="box-social__link">
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="box-social__item">
+          <a href="https://github.com/Oscargjane" class="box-social__link">
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="box-social__item">
+          <a
+            href="https://www.linkedin.com/in/oscar-gonz%C3%A1lez-frontend-dev/"
+            class="box-social__link"
+          >
+            <svg class="box-social__icon">
+              <use href="../src/img/sprite.svg#icon-linkedin2"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>

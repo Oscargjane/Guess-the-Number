@@ -1,0 +1,60 @@
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  @include flex-center();
+  @include set-color-text($color-secondary-opacity-1);
+  font-size: 1.4rem;
+  padding: 3rem 5rem 1rem 5rem;
+  margin-top: -0.8rem;
+  border-radius: $border-radius;
+
+  @include respond($bp-medium) {
+    @include flex-center(column);
+    padding: 3rem 4rem 1rem 4rem;
+  }
+
+  @include respond($bp-small) {
+    border-radius: 0;
+  }
+
+  @include respond($bp-smalest) {
+    padding: 3rem 3rem 1rem 3rem;
+  }
+
+  &__text {
+    flex: 1;
+    text-align: center;
+    padding-left: 18rem;
+
+    @include respond($bp-medium) {
+      padding: 0;
+    }
+
+    &--made {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    &--red {
+      color: $color-primary;
+    }
+  }
+
+  &__link {
+    &:link {
+      @include set-link-style;
+    }
+
+    &:visited {
+      @include set-link-style;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}

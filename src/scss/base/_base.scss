@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+  @include respond($bp-largest) {
+    font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond($bp-large) {
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond($bp-medium) {
+    font-size: 43.75%; // 1rem = 7px; 7px/16px = 43.75%
+  }
+
+  @include respond($bp-smalest) {
+    font-size: 37.5%; // 1rem = 6px; 6px/16px = 37.5%
+  }
+
+  @include respond($bp-big) {
+    font-size: 75%; // 1rem = 12px; 12px/16px = 75%
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+}
+
+.container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: min-content minmax(8rem, min-content);
+  justify-content: center;
+  align-content: center;
+
+  background-image: $gradient-primary-top;
+  background-repeat: no-repeat;
+
+  @include respond($bp-medium) {
+    height: auto;
+    grid-template-columns: 60%;
+    margin: 1rem 0;
+    background-image: $gradient-primary-bottom;
+  }
+
+  @include respond($bp-small) {
+    grid-template-columns: 100%;
+    align-items: stretch;
+    margin: 0;
+  }
+}

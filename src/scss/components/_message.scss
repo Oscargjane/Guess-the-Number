@@ -1,0 +1,9 @@
+.message {
+  @include flex-center(column);
+  @include set-font-style(2.8rem, 700, $line-height: 1);
+  margin-bottom: 5rem;
+
+  &::before {
+    @include separator-line($color-grey-dark-1);
+  }
+}

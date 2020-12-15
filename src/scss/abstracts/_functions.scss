@@ -1,0 +1,36 @@
+// Lighten a color
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+// Return a color based on the background
+@function set-color($bg-color) {
+  @if $bg-color == $color-primary {
+    @return $color-grey-light-1;
+  }
+  @if $bg-color == $color-secondary {
+    @return $color-grey-dark-2;
+  }
+  @if $bg-color ==
+    $color-secondary-opacity-1 or
+    $bg-color ==
+    $color-secondary-opacity-2
+  {
+    @return $color-grey-dark-2;
+  }
+  @if $bg-color ==
+    $color-primary-opacity-1 or
+    $bg-color ==
+    $color-primary-opacity-2
+  {
+    @return $color-grey-light-1;
+  }
+}
+
+// Convert from px to em
+// 16px --> browser default font size
+// 1em = 16px
+// Exp. --- 600px / 16px = 37.5em
+@function calc-em($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}em;
+}

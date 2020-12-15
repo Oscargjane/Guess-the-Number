@@ -1,0 +1,97 @@
+// Set size an element (width and height)
+@mixin set-size($width: 100%, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+// Set the text color
+@mixin set-color-text($bg-color) {
+  background-color: $bg-color;
+  color: set-color($bg-color);
+}
+
+// Center an element using flexbox based on the direction of the main axis
+@mixin flex-center($direction: row) {
+  @if $direction == column {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+  }
+  @if $direction == row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Separator line styles
+@mixin separator-line($color) {
+  @include set-size(1px, 8rem);
+  content: '';
+  display: inline-block;
+  margin: 1.8rem 0;
+  background-color: $color;
+
+  @include respond($bp-large) {
+    margin: 1.8rem 0;
+  }
+
+  @include respond($bp-medium) {
+    @include set-size(0.1rem, 7rem);
+    margin: 1.5rem 0;
+  }
+
+  @include respond($bp-small) {
+    @include set-size(0.1rem, 6rem);
+  }
+}
+
+// Set basic styles
+@mixin set-basic-styles {
+  outline: none;
+  border: none;
+  border-radius: $border-radius;
+}
+
+// Set basic font styles
+@mixin set-font-style(
+  $size: inherit,
+  $weight: 400,
+  $line-height: inherit,
+  $color: inherit
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin set-link-style {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+  transform: translate(0);
+  transition: all 0.2s;
+}
+
+// MEDIA QUERY MANAGER
+// 0 - 600px:         Phone
+// 600px - 900px:     Tablet portrait
+// 900px - 1200px:    Tablet landscape
+// [1200px - 1800px] is where the normal styles apply
+// 1800px + :         Big desktop
+
+@mixin respond($breakpoint) {
+  @if $breakpoint != $bp-big {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  @if $breakpoint == $bp-big {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

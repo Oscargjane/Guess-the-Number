@@ -1,0 +1,64 @@
+// Browser default font size
+$browser-context: 16;
+
+// Converted breakpoints from px to em using calc-em function
+$bp-big: calc-em(1800); // 1800px
+$bp-largest: calc-em(1200); // 1200px
+$bp-large: calc-em(1000); // 1000px
+$bp-medium: calc-em(900); // 900px;
+$bp-small: calc-em(600); // 600px;
+$bp-smalest: calc-em(400); // 400px;
+
+// COLORS
+$color-primary: hsl(0, 79%, 61%);
+$color-secondary: hsl(51, 80%, 90%);
+
+$color-primary-opacity-1: hsl(0, 79%, 61%, 0.8);
+$color-primary-opacity-2: hsl(0, 79%, 61%, 0.7);
+
+$color-secondary-opacity-1: hsla(51, 80%, 90%, 0.902);
+$color-secondary-opacity-2: hsla(51, 80%, 90%, 0.8);
+
+$color-grey-light-1: hsl(131, 73%, 97%);
+$color-grey-dark-1: hsl(0, 0%, 52%);
+$color-grey-dark-2: hsl(0, 0%, 35%);
+
+// Degraded
+$gradient-primary-top: linear-gradient(
+  to top right,
+  tint(hsl(0, 79%, 61%), 30%),
+  tint(hsl(0, 79%, 61%), 50%)
+);
+
+$gradient-primary-bottom: linear-gradient(
+  to bottom right,
+  tint(hsl(0, 79%, 61%), 30%),
+  tint(hsl(0, 79%, 61%), 50%)
+);
+
+$gradient-secondary-top: linear-gradient(
+  to top right,
+  tint(hsl(51, 80%, 90%), 30%),
+  tint(hsl(51, 80%, 90%), 50%)
+);
+
+$gradient-secondary-bottom: linear-gradient(
+  to bottom right,
+  tint(hsl(51, 80%, 90%), 30%),
+  tint(hsl(51, 80%, 90%), 50%)
+);
+
+$gradient-heading: linear-gradient(
+  to bottom right,
+  hsl(0, 79%, 61%),
+  tint(hsl(0, 79%, 61%), 30%)
+);
+
+$gradient-heading--winner: linear-gradient(
+  to bottom right,
+  hsl(51, 80%, 90%),
+  tint(hsl(51, 80%, 90%), 30%)
+);
+
+// BORDERS
+$border-radius: 0.5rem;

@@ -1,0 +1,17 @@
+%global-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  @extend %global-reset;
+
+  &::before {
+    @extend %global-reset;
+  }
+
+  &::after {
+    @extend %global-reset;
+  }
+}

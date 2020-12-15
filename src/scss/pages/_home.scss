@@ -1,0 +1,61 @@
+%general-padding {
+  padding: 4rem 2rem;
+
+  @include respond($bp-large) {
+    padding: 3.5rem 1.5rem;
+  }
+
+  @include respond($bp-medium) {
+    padding: 3.5rem 0;
+  }
+
+  @include respond($bp-big) {
+    padding: 3rem 0;
+  }
+}
+
+.main-container {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-radius: $border-radius;
+  box-shadow: 0 3rem 5rem hsla(0, 0%, 0%, 0.25);
+  overflow: hidden;
+
+  @include respond($bp-medium) {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @include respond($bp-small) {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .section-description {
+    @include flex-center(column);
+    @include set-color-text($color-secondary-opacity-1);
+    @extend %general-padding;
+    grid-column: 1 / span 1;
+    grid-row: 1 / 2;
+
+    @include respond($bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+
+  .section-game {
+    @include flex-center(column);
+    @include set-color-text($color-secondary-opacity-2);
+    @extend %general-padding;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    @include respond($bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+}
