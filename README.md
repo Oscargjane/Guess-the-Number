@@ -1,12 +1,10 @@
 # Guess the Number [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20project&url=https://github.com/Cool/Project&hashtags=project,opensource)
 
-![example](./src/img/project.png)
+![example](https://github.com/Oscargjane/Guess-the-Number/blob/master/src/img/example.png)
 
 #### Small game app to practice my basic Vanilla HTML, CSS, and JavaScript skills, which is to guess the hidden number.
 
 ## Table of content
-
----
 
 - [**Quick start**](#quick-start)
 - [Built With](#built-with)
@@ -15,8 +13,6 @@
 - [Deploy](#deploy)
 
 ## 🚀 Quick start
-
----
 
 1. Clone this repository
 
@@ -40,8 +36,6 @@
 
 ## ⚙️ Built With
 
----
-
 - [Sass](https://sass-lang.com/) - is a CSS extension language that allows you to use things like variables, nested rules, inline imports, and more.
 - [Vanilla JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - is a name to refer to the use of simple JavaScript without additional libraries.
 - [Babel](https://babeljs.io/) - is a JavaScript compiler.
@@ -50,19 +44,13 @@
 
 ## ✍️ License
 
----
-
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Oscargjane/Guess-the-Number/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Oscargjane/Guess-the-Number/blob/master/LICENSE.md) file for details
 
 ## ☎️ Connect with me
-
----
 
 - Twitter - [@OscarJan18](https://twitter.com/OscarJan18 'My Twitter Account')
 - Linkedin - [Oscar González Jané](linkedin.com/in/oscar-gonzález-frontend-dev 'My Linkedin Account')
 
 ## 💫 Deploy
-
----
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com)
