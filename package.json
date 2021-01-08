@@ -13,7 +13,7 @@
     "url": "git+https://github.com/Oscargjane/Guess-the-number.git"
   },
   "author": "Oscar G Jané",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
