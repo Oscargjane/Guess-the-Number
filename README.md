@@ -6,11 +6,11 @@
 
 ## Table of content
 
-- [**Quick start**](#quick-start)
-- [Built With](#built-with)
-- [License](#license)
-- [Contact](#contact)
-- [Deploy](#deploy)
+- [**Quick start**](#🚀-quick-start)
+- [Built With](#⚙️-built-with)
+- [License](#✍️-license)
+- [Connect with me](#☎️-connect-with-me)
+- [Deploy](#💫-deploy)
 
 ## 🚀 Quick start
 
